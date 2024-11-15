@@ -1,0 +1,229 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 44px;
+}
+.pagination a {
+  position: relative;
+  font-size: 21px;
+  font-weight: 500;
+  color: #a4a4a4;
+  transition: all 0.3s ease-in-out;
+}
+.pagination a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--primary-color);
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.pagination a:hover {
+  color: var(--primary-color);
+}
+.pagination a.active {
+  color: var(--text-color);
+}
+.pagination a.active::after {
+  display: block;
+}
+.pagination i {
+  width: 54px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+}
+.pagination i:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.pagination .disabled {
+  pointer-events: none;
+}
+.pagination .disabled i {
+  border-color: #d8d8d8;
+  color: #d8d8d8;
+}
+@media (max-width: 767px) {
+  .pagination a:has(i) {
+    display: none;
+  }
+}
+
+.page-content {
+  padding: 90px 0 70px;
+}
+@media (max-width: 767px) {
+  .page-content {
+    padding: 50px 0;
+  }
+}
+
+.page-head {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 35px;
+  margin-bottom: 55px;
+}
+.page-head .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--primary-color);
+  margin: 0;
+}
+.page-head .page-desc {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+  line-height: 1.3125;
+  margin: 0;
+}
+
+.details-btn {
+  position: absolute;
+  bottom: 20px;
+  inset-inline-end: 20px;
+  min-width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 31px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .details-btn {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+}
+.details-btn i {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .details-btn i {
+    font-size: 24px;
+  }
+}
+.details-btn .text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.details-btn:hover {
+  background-color: var(--primary-color);
+}
+.details-btn:hover i {
+  visibility: hidden;
+  opacity: 0;
+}
+.details-btn:hover .text {
+  width: 110px;
+}
+@media (max-width: 767px) {
+  .details-btn:hover .text {
+    width: 90px;
+  }
+}
+
+.la-linkedin::before {
+  content: "\f0e1";
+}
+
+.la-facebook::before {
+  content: "\f39e";
+}
+
+.contact_page-content {
+  padding-top: 0;
+}
+
+.contact-map {
+  width: 100%;
+  height: 416px;
+  margin-bottom: 40px;
+}
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+@media (max-width: 991px) {
+  .contact-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.contact_page-head {
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.contacts-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 18px;
+}
+
+.contacts-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+.contacts-methods a,
+.contacts-methods span {
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.3s ease-in-out;
+}
+.contacts-methods a i,
+.contacts-methods span i {
+  font-size: 20px;
+}
+.contacts-methods a:hover {
+  color: var(--secondary-color);
+}
+
+@media (max-width: 767px) {
+  .contact-socials {
+    display: flex;
+  }
+}/*# sourceMappingURL=inner.css.map */

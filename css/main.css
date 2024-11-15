@@ -1131,7 +1131,8 @@ html[dir=rtl] .form-control {
   flex-direction: column;
   gap: 21px;
 }
-.footer-contacts a {
+.footer-contacts a,
+.footer-contacts span {
   font-size: 16px;
   color: #fff;
   font-weight: 400;
@@ -1140,13 +1141,14 @@ html[dir=rtl] .form-control {
   gap: 10px;
   transition: all 0.3s ease-in-out;
 }
-.footer-contacts a:hover {
-  color: var(--secondary-color);
-}
 @media (max-width: 767px) {
-  .footer-contacts a {
+  .footer-contacts a,
+  .footer-contacts span {
     font-size: 14px;
   }
+}
+.footer-contacts a:hover {
+  color: var(--secondary-color);
 }
 @media (max-width: 767px) {
   .footer-contacts {
