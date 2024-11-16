@@ -70,6 +70,7 @@ $(document).ready(function () {
       }
     }
   });
+
   /************************************ Blog Slider ************************************/
   var blogSwiper = new Swiper(".blog-slider .swiper", {
     a11y: {
@@ -87,109 +88,9 @@ $(document).ready(function () {
     },
   });
 
-  // /************************************ Projects Slider ************************************/
-  // var projectsSwiper = new Swiper(".projects-slider .swiper", {
-  //   a11y: {
-  //     enabled: false,
-  //   },
-  //   loop: true,
-  //   breakpoints: {
-  //     0: {
-  //       slidesPerView: 1,
-  //       spaceBetween: 15,
-  //     },
-  //     767: {
-  //       slidesPerView: 2,
-  //       spaceBetween: 20,
-  //     },
-  //     992: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 10,
-  //     },
-  //     1199: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 25,
-  //     },
-  //     1499: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 41,
-  //     },
-  //   },
-  //   navigation: {
-  //     nextEl: ".projects-slider .swiper-btn-next",
-  //     prevEl: ".projects-slider .swiper-btn-prev",
-  //   },
-  //   pagination: {
-  //     el: ".projects-slider .slider-pagination",
-  //     clickable: true,
-  //   },
-  // });
-
-  // /************************************ Fields Slider ************************************/
-  // var fieldsSwiper = new Swiper(".fields-slider .swiper", {
-  //   a11y: {
-  //     enabled: false,
-  //   },
-  //   loop: true,
-  //   breakpoints: {
-  //     0: {
-  //       slidesPerView: 1,
-  //       spaceBetween: 15,
-  //     },
-  //     767: {
-  //       slidesPerView: 2,
-  //       spaceBetween: 20,
-  //     },
-  //     992: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 10,
-  //     },
-  //     1199: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 25,
-  //     },
-  //     1499: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 41,
-  //     },
-  //   },
-  //   pagination: {
-  //     el: ".fields-slider .slider-pagination",
-  //     clickable: true,
-  //   },
-  // });
-
-  // /************************************ Blog Slider ************************************/
-  // var blogSwiper = new Swiper(".blog-slider .swiper", {
-  //   a11y: {
-  //     enabled: false,
-  //   },
-  //   loop: true,
-  //   breakpoints: {
-  //     0: {
-  //       slidesPerView: 1,
-  //       spaceBetween: 15,
-  //     },
-  //     767: {
-  //       slidesPerView: 2,
-  //       spaceBetween: 20,
-  //     },
-  //     992: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 10,
-  //     },
-  //     1199: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 25,
-  //     },
-  //     1499: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 41,
-  //     },
-  //   },
-  //   pagination: {
-  //     el: ".blog-slider .slider-pagination",
-  //     clickable: true,
-  //   },
-  // });
+  /************************************ Blog Slider ************************************/
+  $(".filter-btn").click(function () {
+    $(".filter-btn").toggleClass("active");
+    $(".filter-body").slideToggle();
+  });
 });
