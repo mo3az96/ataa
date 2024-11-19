@@ -249,11 +249,25 @@
 
 .page-content {
   padding: 90px 0 70px;
+  position: relative;
+  transform: perspective(1px);
 }
 @media (max-width: 767px) {
   .page-content {
     padding: 50px 0;
   }
+}
+.page-content .pattern {
+  position: absolute;
+  top: -120px;
+  inset-inline-start: -150px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .page-head {
