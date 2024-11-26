@@ -436,10 +436,22 @@ body {
 }
 .contacts-methods a i,
 .contacts-methods span i {
-  font-size: 20px;
+  width: 24px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contacts-methods a img,
+.contacts-methods span img {
+  filter: brightness(0) saturate(100%) invert(31%) sepia(51%) saturate(646%) hue-rotate(96deg) brightness(99%) contrast(99%);
+  transition: all 0.3s ease-in-out;
 }
 .contacts-methods a:hover {
   color: var(--secondary-color);
+}
+.contacts-methods a:hover img {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(79%) saturate(309%) hue-rotate(96deg) brightness(90%) contrast(92%);
 }
 
 @media (max-width: 767px) {
@@ -630,6 +642,10 @@ body {
   color: #fff;
 }
 
+.projects-page {
+  padding-top: 0;
+}
+
 .projects_page-content {
   width: 100%;
   max-width: 1342px;
@@ -660,7 +676,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--border-color);
   background-color: #fff;
   font-size: 30px;
   color: var(--primary-color);
@@ -867,7 +883,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--border-color);
   border-inline-start-width: 20px;
   padding: 0 40px;
   font-size: 16px;
@@ -883,7 +899,7 @@ body {
   inset-inline-end: 0;
   bottom: 0;
   inset-inline-start: 0;
-  background-color: var(--text-color);
+  background-color: var(--border-color);
   transform: scaleX(0);
   transform-origin: right;
   transition: all 0.3s ease-in-out;
@@ -1032,7 +1048,7 @@ html[dir=ltr] .post-tags .tag::before {
 .board-member .member-img {
   width: 100%;
   aspect-ratio: 213/210;
-  border: 1px solid #0d6e3b;
+  border: 1px solid var(--primary-color);
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 25px;
@@ -1220,7 +1236,7 @@ html[dir=ltr] .report-item:hover .report-link {
 .goal-item .goal-content {
   position: relative;
   z-index: 3;
-  border: 1px solid #0d6e3b;
+  border: 1px solid var(--primary-color);
   background-color: #fff;
   border-radius: 10px;
   padding: 12px 26px;
